@@ -1,0 +1,260 @@
+\hypertarget{class_graph}{}\doxysection{Graph Class Reference}
+\label{class_graph}\index{Graph@{Graph}}
+
+
+{\ttfamily \#include $<$Graph.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_graph_afd29066ef815b23b9c9e7b5f84caab9a}{Graph}} (int nodes)
+\item 
+void \mbox{\hyperlink{class_graph_ac6192a41101102ca8aa6acca607c84f3}{clear}} ()
+\item 
+void \mbox{\hyperlink{class_graph_ae6435511191b198acbd6ef2a6c84be10}{add\+Node}} (const \mbox{\hyperlink{struct_node}{Node}} \&node, int index)
+\item 
+\mbox{\hyperlink{struct_node}{Node}} \mbox{\hyperlink{class_graph_a1469f1678780adf91b135571e34ac0b1}{get\+Node}} (const \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&coordinate)
+\item 
+void \mbox{\hyperlink{class_graph_ab7d3c7c242a6ac4537b3b1e9ae3e23d5}{add\+Edge}} (int departure, int arrival, \mbox{\hyperlink{struct_flight}{Flight}} \&flight)
+\item 
+void \mbox{\hyperlink{class_graph_a3dc0060de38c06cbb1086e917a091502}{BFS}} (int departure)
+\item 
+void \mbox{\hyperlink{class_graph_ac792766f4a991fb6926a8d7c060244f9}{BFS}} (int departure, set$<$ string $>$ \&airlines)
+\item 
+vector$<$ \mbox{\hyperlink{struct_node}{Node}} $>$ \mbox{\hyperlink{class_graph_adec5445de6e69f7cfd9a8dba123e923f}{make\+Path}} (int departure, int arrival)
+\item 
+vector$<$ \mbox{\hyperlink{struct_node}{Node}} $>$ \mbox{\hyperlink{class_graph_a5bd2f740bc83b4fdc68b3b77cb74f50d}{make\+Path}} (int departure, int arrival, set$<$ string $>$ \&airlines)
+\item 
+void \mbox{\hyperlink{class_graph_a3cc1fb0edcec478facbd958c956a8947}{activate\+Airport}} (int airport)
+\item 
+void \mbox{\hyperlink{class_graph_ad6f08346e2bd68cdcb94e9ed9ae74ba0}{disable\+All\+Airports}} ()
+\item 
+void \mbox{\hyperlink{class_graph_a0a598f09420cd2f0d2e89b3d23784762}{activate\+All\+Airports}} ()
+\item 
+void \mbox{\hyperlink{class_graph_a94527abb361b2d790468dc4473851b6e}{activate\+All\+Airlines}} ()
+\item 
+int \mbox{\hyperlink{class_graph_a502e1183b6d799a9ae14842d828575ae}{count\+Flights\+Source\+Airport}} (string airport)
+\item 
+int \mbox{\hyperlink{class_graph_ad33eb248d74a83a714543d436450a111}{count\+Airlines\+Airport}} (string airport, string airline)
+\item 
+int \mbox{\hyperlink{class_graph_adc4cbdbfedabd192ab147d3d74c9f7b3}{count\+Targets\+Airport}} (string airport)
+\item 
+int \mbox{\hyperlink{class_graph_a318d0e1e1eb60e4a18013528edbb2d57}{count\+City\+Targets\+Airport}} (string airport)
+\item 
+int \mbox{\hyperlink{class_graph_a9455434501ec37fa4ad41dfa4c49a82c}{count\+Country\+Targets\+Airport}} (string airport)
+\item 
+int \mbox{\hyperlink{class_graph_a824fa0af29cc1f80de13ed30564fbacb}{airports\+Reached}} (string airport, int n)
+\item 
+int \mbox{\hyperlink{class_graph_a7f56eead362bd6a1396693349abb2f92}{cities\+Reached}} (string airport, int n)
+\item 
+int \mbox{\hyperlink{class_graph_ab59cba5dba5ab28609c1e1b3325bf556}{countries\+Reached}} (string airport, int n)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that represents a \mbox{\hyperlink{class_graph}{Graph}} and its entire structure 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_graph_afd29066ef815b23b9c9e7b5f84caab9a}\label{class_graph_afd29066ef815b23b9c9e7b5f84caab9a}} 
+\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{Graph()}{Graph()}}
+{\footnotesize\ttfamily nodes a vector containing \mbox{\hyperlink{struct_node}{Node}} type struct that includes all nodes of current Graph\+::\+Graph (\begin{DoxyParamCaption}\item[{int}]{nodes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Main constructor of the class \mbox{\hyperlink{class_graph}{Graph}} 
+\begin{DoxyParams}{Parameters}
+{\em nodes} & integer number that represents the number of nodes that graph must have \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graph_a3cc1fb0edcec478facbd958c956a8947}\label{class_graph_a3cc1fb0edcec478facbd958c956a8947}} 
+\index{Graph@{Graph}!activateAirport@{activateAirport}}
+\index{activateAirport@{activateAirport}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{activateAirport()}{activateAirport()}}
+{\footnotesize\ttfamily void Graph\+::activate\+Airport (\begin{DoxyParamCaption}\item[{int}]{airport }\end{DoxyParamCaption})}
+
+Function that disable a airport Time Complexity\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em airport} & -\/ an integer value containing the index of airport \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a94527abb361b2d790468dc4473851b6e}\label{class_graph_a94527abb361b2d790468dc4473851b6e}} 
+\index{Graph@{Graph}!activateAllAirlines@{activateAllAirlines}}
+\index{activateAllAirlines@{activateAllAirlines}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{activateAllAirlines()}{activateAllAirlines()}}
+{\footnotesize\ttfamily void Graph\+::activate\+All\+Airlines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function that activates all nodes in current \mbox{\hyperlink{class_graph}{Graph}} Time Complexity\+: O(\+V$\ast$\+E), in which V is the number of Nodes and E is the number of Edges; \mbox{\Hypertarget{class_graph_a0a598f09420cd2f0d2e89b3d23784762}\label{class_graph_a0a598f09420cd2f0d2e89b3d23784762}} 
+\index{Graph@{Graph}!activateAllAirports@{activateAllAirports}}
+\index{activateAllAirports@{activateAllAirports}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{activateAllAirports()}{activateAllAirports()}}
+{\footnotesize\ttfamily void Graph\+::activate\+All\+Airports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function that activates all nodes in current \mbox{\hyperlink{class_graph}{Graph}} Time Complexity\+: O(\+V), which V is the number of Nodes \mbox{\Hypertarget{class_graph_ab7d3c7c242a6ac4537b3b1e9ae3e23d5}\label{class_graph_ab7d3c7c242a6ac4537b3b1e9ae3e23d5}} 
+\index{Graph@{Graph}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily void Graph\+::add\+Edge (\begin{DoxyParamCaption}\item[{int}]{departure,  }\item[{int}]{arrival,  }\item[{\mbox{\hyperlink{struct_flight}{Flight}} \&}]{flight }\end{DoxyParamCaption})}
+
+Function that adds an \mbox{\hyperlink{struct_edge}{Edge}} between two nodes Time Complexity\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em flight} & -\/ an object passed by reference containing the details of one of the flights between 2 airports \\
+\hline
+{\em departure} & -\/ an string representing the departure airport \\
+\hline
+{\em arrival} & -\/ an string representing the arrival airport \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_ae6435511191b198acbd6ef2a6c84be10}\label{class_graph_ae6435511191b198acbd6ef2a6c84be10}} 
+\index{Graph@{Graph}!addNode@{addNode}}
+\index{addNode@{addNode}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addNode()}{addNode()}}
+{\footnotesize\ttfamily void Graph\+::add\+Node (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_node}{Node}} \&}]{node,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+Function that adds a new \mbox{\hyperlink{struct_node}{Node}} to the graph Time Complexity\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em node} & -\/ \mbox{\hyperlink{struct_node}{Node}} struct that contains all characteristics of the stop \\
+\hline
+{\em index} & -\/ an integer value that represents the Stop index in vector \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a824fa0af29cc1f80de13ed30564fbacb}\label{class_graph_a824fa0af29cc1f80de13ed30564fbacb}} 
+\index{Graph@{Graph}!airportsReached@{airportsReached}}
+\index{airportsReached@{airportsReached}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{airportsReached()}{airportsReached()}}
+{\footnotesize\ttfamily int Graph\+::airports\+Reached (\begin{DoxyParamCaption}\item[{string}]{airport,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+Function that counts the number of different airport destinations of all flights on a given source airport and given a max number of possible flights Time Complexity\+: O(\+V$\ast$\+E), in which V is the number of Nodes and E is the number of Edges; \mbox{\Hypertarget{class_graph_a3dc0060de38c06cbb1086e917a091502}\label{class_graph_a3dc0060de38c06cbb1086e917a091502}} 
+\index{Graph@{Graph}!BFS@{BFS}}
+\index{BFS@{BFS}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{BFS()}{BFS()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Graph\+::\+BFS (\begin{DoxyParamCaption}\item[{int}]{departure }\end{DoxyParamCaption})}
+
+Breadth-\/first search to determinate the distance, in nodes, between two airports Time Complexity\+: O(V + E), which V is the number of Nodes and E is the number of edges 
+\begin{DoxyParams}{Parameters}
+{\em departure} & -\/ index of departure airport \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_ac792766f4a991fb6926a8d7c060244f9}\label{class_graph_ac792766f4a991fb6926a8d7c060244f9}} 
+\index{Graph@{Graph}!BFS@{BFS}}
+\index{BFS@{BFS}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{BFS()}{BFS()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Graph\+::\+BFS (\begin{DoxyParamCaption}\item[{int}]{departure,  }\item[{set$<$ string $>$ \&}]{airlines }\end{DoxyParamCaption})}
+
+Breadth-\/first search to determinate the distance, in nodes, between two airports Time Complexity\+: O(V + E), which V is the number of Nodes and E is the number of edges 
+\begin{DoxyParams}{Parameters}
+{\em departure} & -\/ index of departure airport \\
+\hline
+{\em airlines} & -\/ set of airlines the user want to use \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a7f56eead362bd6a1396693349abb2f92}\label{class_graph_a7f56eead362bd6a1396693349abb2f92}} 
+\index{Graph@{Graph}!citiesReached@{citiesReached}}
+\index{citiesReached@{citiesReached}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{citiesReached()}{citiesReached()}}
+{\footnotesize\ttfamily int Graph\+::cities\+Reached (\begin{DoxyParamCaption}\item[{string}]{airport,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+Function that counts the number of different city destinations of all flights on a given source airport and given a max number of possible flights Time Complexity\+: O(\+V$\ast$\+E), in which V is the number of Nodes and E is the number of Edges; \mbox{\Hypertarget{class_graph_ac6192a41101102ca8aa6acca607c84f3}\label{class_graph_ac6192a41101102ca8aa6acca607c84f3}} 
+\index{Graph@{Graph}!clear@{clear}}
+\index{clear@{clear}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Graph\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function that clears all Nodes Time Complexity\+: O(\+V), which V is the number of nodes \mbox{\Hypertarget{class_graph_ad33eb248d74a83a714543d436450a111}\label{class_graph_ad33eb248d74a83a714543d436450a111}} 
+\index{Graph@{Graph}!countAirlinesAirport@{countAirlinesAirport}}
+\index{countAirlinesAirport@{countAirlinesAirport}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{countAirlinesAirport()}{countAirlinesAirport()}}
+{\footnotesize\ttfamily int Graph\+::count\+Airlines\+Airport (\begin{DoxyParamCaption}\item[{string}]{airport,  }\item[{string}]{airline }\end{DoxyParamCaption})}
+
+Function that counts the number of airlines operating on a given source airport Time Complexity\+: O(\+V$\ast$\+E), in which V is the number of Nodes and E is the number of Edges; \mbox{\Hypertarget{class_graph_a318d0e1e1eb60e4a18013528edbb2d57}\label{class_graph_a318d0e1e1eb60e4a18013528edbb2d57}} 
+\index{Graph@{Graph}!countCityTargetsAirport@{countCityTargetsAirport}}
+\index{countCityTargetsAirport@{countCityTargetsAirport}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{countCityTargetsAirport()}{countCityTargetsAirport()}}
+{\footnotesize\ttfamily int Graph\+::count\+City\+Targets\+Airport (\begin{DoxyParamCaption}\item[{string}]{airport }\end{DoxyParamCaption})}
+
+Function that counts the number of different city destinations of all flights on a given source airport Time Complexity\+: O(\+V$\ast$\+E), in which V is the number of Nodes and E is the number of Edges; \mbox{\Hypertarget{class_graph_a9455434501ec37fa4ad41dfa4c49a82c}\label{class_graph_a9455434501ec37fa4ad41dfa4c49a82c}} 
+\index{Graph@{Graph}!countCountryTargetsAirport@{countCountryTargetsAirport}}
+\index{countCountryTargetsAirport@{countCountryTargetsAirport}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{countCountryTargetsAirport()}{countCountryTargetsAirport()}}
+{\footnotesize\ttfamily int Graph\+::count\+Country\+Targets\+Airport (\begin{DoxyParamCaption}\item[{string}]{airport }\end{DoxyParamCaption})}
+
+Function that counts the number of different country destinations of all flights on a given source airport Time Complexity\+: O(\+V$\ast$\+E), in which V is the number of Nodes and E is the number of Edges; \mbox{\Hypertarget{class_graph_a502e1183b6d799a9ae14842d828575ae}\label{class_graph_a502e1183b6d799a9ae14842d828575ae}} 
+\index{Graph@{Graph}!countFlightsSourceAirport@{countFlightsSourceAirport}}
+\index{countFlightsSourceAirport@{countFlightsSourceAirport}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{countFlightsSourceAirport()}{countFlightsSourceAirport()}}
+{\footnotesize\ttfamily int Graph\+::count\+Flights\+Source\+Airport (\begin{DoxyParamCaption}\item[{string}]{airport }\end{DoxyParamCaption})}
+
+Function that counts the number of flights of a given source airport Time Complexity\+: O(\+V), which V is the number of Nodes \mbox{\Hypertarget{class_graph_ab59cba5dba5ab28609c1e1b3325bf556}\label{class_graph_ab59cba5dba5ab28609c1e1b3325bf556}} 
+\index{Graph@{Graph}!countriesReached@{countriesReached}}
+\index{countriesReached@{countriesReached}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{countriesReached()}{countriesReached()}}
+{\footnotesize\ttfamily int Graph\+::countries\+Reached (\begin{DoxyParamCaption}\item[{string}]{airport,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+Function that counts the number of different country destinations of all flights on a given source airport and given a max number of possible flights Time Complexity\+: O(\+V$\ast$\+E), in which V is the number of Nodes and E is the number of Edges; \mbox{\Hypertarget{class_graph_adc4cbdbfedabd192ab147d3d74c9f7b3}\label{class_graph_adc4cbdbfedabd192ab147d3d74c9f7b3}} 
+\index{Graph@{Graph}!countTargetsAirport@{countTargetsAirport}}
+\index{countTargetsAirport@{countTargetsAirport}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{countTargetsAirport()}{countTargetsAirport()}}
+{\footnotesize\ttfamily int Graph\+::count\+Targets\+Airport (\begin{DoxyParamCaption}\item[{string}]{airport }\end{DoxyParamCaption})}
+
+Function that counts the number of different airport destinations of all flights on a given source airport Time Complexity\+: O(\+V$\ast$\+E), in which V is the number of Nodes and E is the number of Edges; \mbox{\Hypertarget{class_graph_ad6f08346e2bd68cdcb94e9ed9ae74ba0}\label{class_graph_ad6f08346e2bd68cdcb94e9ed9ae74ba0}} 
+\index{Graph@{Graph}!disableAllAirports@{disableAllAirports}}
+\index{disableAllAirports@{disableAllAirports}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{disableAllAirports()}{disableAllAirports()}}
+{\footnotesize\ttfamily void Graph\+::disable\+All\+Airports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function that disables all nodes in current \mbox{\hyperlink{class_graph}{Graph}} Time Complexity\+: O(\+V), which V is the number of Nodes \mbox{\Hypertarget{class_graph_a1469f1678780adf91b135571e34ac0b1}\label{class_graph_a1469f1678780adf91b135571e34ac0b1}} 
+\index{Graph@{Graph}!getNode@{getNode}}
+\index{getNode@{getNode}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getNode()}{getNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node}{Node}} Graph\+::get\+Node (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&}]{coordinate }\end{DoxyParamCaption})}
+
+@\+Overload Function that returns one airport, based on his coordinate Time Complexity\+: O(\+V), which V is the number of Nodes 
+\begin{DoxyParams}{Parameters}
+{\em coordinate} & -\/ a \mbox{\hyperlink{struct_coordinate}{Coordinate}} struct that represents the airport coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \mbox{\hyperlink{struct_node}{Node}} struct, representing the airport closest to the given coordinate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_adec5445de6e69f7cfd9a8dba123e923f}\label{class_graph_adec5445de6e69f7cfd9a8dba123e923f}} 
+\index{Graph@{Graph}!makePath@{makePath}}
+\index{makePath@{makePath}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{makePath()}{makePath()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{struct_node}{Node}} $>$ Graph\+::make\+Path (\begin{DoxyParamCaption}\item[{int}]{departure,  }\item[{int}]{arrival }\end{DoxyParamCaption})}
+
+Function that returns a path based on users input Time Complexity\+: O(\+V), which V is the number of Nodes 
+\begin{DoxyParams}{Parameters}
+{\em departure} & -\/ index of departure airport \\
+\hline
+{\em arrival} & -\/ index of arrival airport \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector of \mbox{\hyperlink{struct_node}{Node}} structs that containing all path between arrival and departure nodes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a5bd2f740bc83b4fdc68b3b77cb74f50d}\label{class_graph_a5bd2f740bc83b4fdc68b3b77cb74f50d}} 
+\index{Graph@{Graph}!makePath@{makePath}}
+\index{makePath@{makePath}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{makePath()}{makePath()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{struct_node}{Node}} $>$ Graph\+::make\+Path (\begin{DoxyParamCaption}\item[{int}]{departure,  }\item[{int}]{arrival,  }\item[{set$<$ string $>$ \&}]{airlines }\end{DoxyParamCaption})}
+
+Function that returns a path based on users input Time Complexity\+: O(\+V), which V is the number of Nodes 
+\begin{DoxyParams}{Parameters}
+{\em departure} & -\/ index of departure airport \\
+\hline
+{\em arrival} & -\/ index of arrival airport \\
+\hline
+{\em airlines} & -\/ set of airlines the user want to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector of \mbox{\hyperlink{struct_node}{Node}} structs that containing all path between arrival and departure nodes 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Graph.\+h\item 
+Graph.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,72 @@
+\hypertarget{_menu_8h_source}{}\doxysection{Menu.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PROJETO2\_MENU\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PROJETO2\_MENU\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <stack>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}WorldAirspace.h"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define MAIN\_MENU 0}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define SEARCH\_MENU 1}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define SEARCH\_DEFINITIONS\_MENU 2}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define INFO\_AIRPORT\_MENU 3}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define COORDINATE\_MENU 4}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define AIRPORT\_MENU 5}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define CITY\_MENU 6}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#define COUNTRY\_MENU 7}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{class_menu}{Menu}} \{}
+\DoxyCodeLine{21 \textcolor{keyword}{public}:}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{26     \mbox{\hyperlink{class_menu_ad466dd83355124a6ed958430450bfe94}{Menu}}();}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{private}:}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{33     \textcolor{keywordtype}{int} option;}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{38     \textcolor{keywordtype}{string} optionAirport;}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{43     stack<short  int> menuState;}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{48     set<string> airlines;}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{53     \mbox{\hyperlink{class_world_airspace}{WorldAirspace}} worldAirspace;}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{58     \textcolor{keywordtype}{void} getMenu();}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{63     \textcolor{keywordtype}{void} mainMenu();}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{68     \textcolor{keywordtype}{void} searchDefinitionsMenu();}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{73     \textcolor{keywordtype}{void} searchMenu();}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{78     \textcolor{keywordtype}{void} infoAirportMenu();}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{83     \textcolor{keywordtype}{void} coordMenu();}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{88     \textcolor{keywordtype}{void} airportMenu();}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{93     \textcolor{keywordtype}{void} cityMenu();}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{98     \textcolor{keywordtype}{void} countryMenu();}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{103     \textcolor{keywordtype}{void} flightsMenu();}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{108      \textcolor{keywordtype}{void} airlineMenu();}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{113     \textcolor{keywordtype}{void} airportsMenu();}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{118     \textcolor{keywordtype}{void} routesByYFlightsMenu();}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{123     \textcolor{keywordtype}{void} activateAirlineMenu();}
+\DoxyCodeLine{124 \};}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

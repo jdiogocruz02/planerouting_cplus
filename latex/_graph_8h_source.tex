@@ -1,0 +1,149 @@
+\hypertarget{_graph_8h_source}{}\doxysection{Graph.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PROJETO2\_GRAPH\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PROJETO2\_GRAPH\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <set>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <queue>}}
+\DoxyCodeLine{11 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define INF (INT\_MAX/2)}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{21 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_flight}{Flight}}\{}
+\DoxyCodeLine{25     \textcolor{keywordtype}{string} departure;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{30     \textcolor{keywordtype}{string} arrival;}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{35     \textcolor{keywordtype}{string} airline;}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{42 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_coordinate}{Coordinate}} \{}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{47     \textcolor{keywordtype}{double} latitude;}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{52     \textcolor{keywordtype}{double} longitude;}
+\DoxyCodeLine{53 \};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{58 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_custom_weight}{CustomWeight}} \{}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{63     \textcolor{keywordtype}{double} km;}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{68     \textcolor{keywordtype}{int} numberOfFlights;}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{73     \textcolor{keywordtype}{int} numberOfCities;}
+\DoxyCodeLine{74 \};}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{79 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_edge}{Edge}} \{}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{84     \textcolor{keywordtype}{int} dest;}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{89     \textcolor{keywordtype}{double} weight;}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{94     \mbox{\hyperlink{struct_flight}{Flight}} flight;}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{99     \textcolor{keywordtype}{bool} visited;}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101 \};}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{106 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_node}{Node}} \{}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{111     \textcolor{keywordtype}{string} code;}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{116     \textcolor{keywordtype}{string} name;}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{121     \textcolor{keywordtype}{string} city;}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{126     \textcolor{keywordtype}{string} country;}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{131     \mbox{\hyperlink{struct_coordinate}{Coordinate}} coordinate;}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{136     \textcolor{keywordtype}{bool} available;}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{141     list<Edge> adjacent;}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{146     \mbox{\hyperlink{struct_custom_weight}{CustomWeight}} customWeight;}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{151     \textcolor{keywordtype}{bool} visited;}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{156     \textcolor{keywordtype}{int} parent;}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{161     \mbox{\hyperlink{struct_flight}{Flight}} currentFlight;}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{166     \textcolor{keywordtype}{int} distance;}
+\DoxyCodeLine{167 \};}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{172 \textcolor{keyword}{class }\mbox{\hyperlink{class_graph}{Graph}} \{}
+\DoxyCodeLine{173 }
+\DoxyCodeLine{174 }
+\DoxyCodeLine{178     vector<Node> nodes;}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{180 }
+\DoxyCodeLine{184     \textcolor{keywordtype}{int} n = 3019;}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187 }
+\DoxyCodeLine{197     \textcolor{keywordtype}{double} computeDistance(\textcolor{keywordtype}{double} lat1, \textcolor{keywordtype}{double} lon1, \textcolor{keywordtype}{double} lat2, \textcolor{keywordtype}{double} lon2);}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{199 }
+\DoxyCodeLine{200 \textcolor{keyword}{public}:}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{206     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_graph}{Graph}}(\textcolor{keywordtype}{int} nodes);}
+\DoxyCodeLine{207 }
+\DoxyCodeLine{212     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_ac6192a41101102ca8aa6acca607c84f3}{clear}}();}
+\DoxyCodeLine{213 }
+\DoxyCodeLine{220     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_ae6435511191b198acbd6ef2a6c84be10}{addNode}}(\textcolor{keyword}{const} \mbox{\hyperlink{struct_node}{Node}} \&node, \textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{229     \mbox{\hyperlink{struct_node}{Node}} \mbox{\hyperlink{class_graph_a1469f1678780adf91b135571e34ac0b1}{getNode}}(\textcolor{keyword}{const} \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&coordinate);}
+\DoxyCodeLine{230 }
+\DoxyCodeLine{238     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_ab7d3c7c242a6ac4537b3b1e9ae3e23d5}{addEdge}}(\textcolor{keywordtype}{int} departure, \textcolor{keywordtype}{int} arrival, \mbox{\hyperlink{struct_flight}{Flight}} \&flight);}
+\DoxyCodeLine{239 }
+\DoxyCodeLine{240 }
+\DoxyCodeLine{246     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_a3dc0060de38c06cbb1086e917a091502}{BFS}}(\textcolor{keywordtype}{int} departure);}
+\DoxyCodeLine{247 }
+\DoxyCodeLine{254     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_a3dc0060de38c06cbb1086e917a091502}{BFS}}(\textcolor{keywordtype}{int} departure,set<string> \&airlines);}
+\DoxyCodeLine{255 }
+\DoxyCodeLine{256 }
+\DoxyCodeLine{264     vector<Node> \mbox{\hyperlink{class_graph_adec5445de6e69f7cfd9a8dba123e923f}{makePath}}(\textcolor{keywordtype}{int} departure, \textcolor{keywordtype}{int} arrival);}
+\DoxyCodeLine{265 }
+\DoxyCodeLine{274     vector<Node> \mbox{\hyperlink{class_graph_adec5445de6e69f7cfd9a8dba123e923f}{makePath}}(\textcolor{keywordtype}{int} departure, \textcolor{keywordtype}{int} arrival, set<string> \&airlines);}
+\DoxyCodeLine{275 }
+\DoxyCodeLine{281     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_a3cc1fb0edcec478facbd958c956a8947}{activateAirport}}(\textcolor{keywordtype}{int} airport);}
+\DoxyCodeLine{282 }
+\DoxyCodeLine{287     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_ad6f08346e2bd68cdcb94e9ed9ae74ba0}{disableAllAirports}}();}
+\DoxyCodeLine{288 }
+\DoxyCodeLine{293     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_a0a598f09420cd2f0d2e89b3d23784762}{activateAllAirports}}();}
+\DoxyCodeLine{294 }
+\DoxyCodeLine{299     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_a94527abb361b2d790468dc4473851b6e}{activateAllAirlines}}();}
+\DoxyCodeLine{300 }
+\DoxyCodeLine{305     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_graph_a502e1183b6d799a9ae14842d828575ae}{countFlightsSourceAirport}}(\textcolor{keywordtype}{string} airport);}
+\DoxyCodeLine{306 }
+\DoxyCodeLine{311     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_graph_ad33eb248d74a83a714543d436450a111}{countAirlinesAirport}}(\textcolor{keywordtype}{string} airport, \textcolor{keywordtype}{string} airline);}
+\DoxyCodeLine{312 }
+\DoxyCodeLine{317     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_graph_adc4cbdbfedabd192ab147d3d74c9f7b3}{countTargetsAirport}}(\textcolor{keywordtype}{string} airport);}
+\DoxyCodeLine{318 }
+\DoxyCodeLine{323     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_graph_a318d0e1e1eb60e4a18013528edbb2d57}{countCityTargetsAirport}}(\textcolor{keywordtype}{string} airport);}
+\DoxyCodeLine{324 }
+\DoxyCodeLine{329     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_graph_a9455434501ec37fa4ad41dfa4c49a82c}{countCountryTargetsAirport}}(\textcolor{keywordtype}{string} airport);}
+\DoxyCodeLine{330 }
+\DoxyCodeLine{335     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_graph_a824fa0af29cc1f80de13ed30564fbacb}{airportsReached}}(\textcolor{keywordtype}{string} airport, \textcolor{keywordtype}{int} n);}
+\DoxyCodeLine{336 }
+\DoxyCodeLine{337 }
+\DoxyCodeLine{342     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_graph_a7f56eead362bd6a1396693349abb2f92}{citiesReached}}(\textcolor{keywordtype}{string} airport, \textcolor{keywordtype}{int} n);}
+\DoxyCodeLine{343 }
+\DoxyCodeLine{344 }
+\DoxyCodeLine{349     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_graph_ab59cba5dba5ab28609c1e1b3325bf556}{countriesReached}}(\textcolor{keywordtype}{string} airport, \textcolor{keywordtype}{int} n);}
+\DoxyCodeLine{350 }
+\DoxyCodeLine{351 }
+\DoxyCodeLine{352 \};}
+\DoxyCodeLine{353 }
+\DoxyCodeLine{354 }
+\DoxyCodeLine{355 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//UNTITLED\_GRAPH\_H}}
+
+\end{DoxyCode}

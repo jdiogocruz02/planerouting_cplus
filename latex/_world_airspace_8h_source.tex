@@ -1,0 +1,70 @@
+\hypertarget{_world_airspace_8h_source}{}\doxysection{World\+Airspace.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PROJETO2\_WORLDAIRSPACE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PROJETO2\_WORLDAIRSPACE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}Graph.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{11 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define AIRPORTS "{}../data/airports.csv"{}} \textcolor{comment}{// Nodes}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define FLIGHTS "{}../data/flights.csv"{}} \textcolor{comment}{// Links}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{class_world_airspace}{WorldAirspace}} \{}
+\DoxyCodeLine{20 \textcolor{keyword}{private}:}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{25     \mbox{\hyperlink{class_graph}{Graph}} graph;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{30     map<string, int> airports;}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{35     vector<Flight> flights;}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} createAirports();}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} createFlights();}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{keyword}{public}:}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{56     \mbox{\hyperlink{class_world_airspace_a1813392a89b1567fbdc239c44617dde4}{WorldAirspace}}();}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{61     \mbox{\hyperlink{class_world_airspace_a2cadf469f994f51d88cfc19a664dd3f6}{\string~WorldAirspace}}();}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{71     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_airspace_a4661f3835f4965638f74cb7538256834}{showPath}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&departure, \textcolor{keyword}{const} \textcolor{keywordtype}{string} \&arrival, set<string> \&airlines);}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{81     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_airspace_a4661f3835f4965638f74cb7538256834}{showPath}}(\textcolor{keyword}{const} \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&coordDeparture, \textcolor{keyword}{const} \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&coordArrival, set<string> \&airlines);}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{87     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_world_airspace_a092c4f062e257b5a9621e35174e90695}{countFlightsSourceAirport}}(\textcolor{keywordtype}{string} airport);}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{93     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_world_airspace_a72a927d900e69899b8a6edc9b137d126}{countAirlinesAirport}}(\textcolor{keywordtype}{string} airport, \textcolor{keywordtype}{string} airline);}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{99     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_world_airspace_a96965406f17299c0489b07fe0a425855}{countTargetsAirport}}(\textcolor{keywordtype}{string} airport);}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{105     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_world_airspace_abf1e5bc1b2bb48e1a48a0b074edeca9b}{countCityTargetsAirport}}(\textcolor{keywordtype}{string} airport);}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{111     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_world_airspace_a5b4c9f5f71c20bae8d929bfbd9655ee2}{countCountryTargetsAirport}}(\textcolor{keywordtype}{string} airport);}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{117     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_world_airspace_a51951bfd0efd642d9aa69861632f363f}{airportsReached}}(\textcolor{keywordtype}{string} airport, \textcolor{keywordtype}{int} n);}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{123     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_world_airspace_a0da0a5f619af5864dc8b3decd6af1160}{citiesReached}}(\textcolor{keywordtype}{string} airport, \textcolor{keywordtype}{int} n);}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{129     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_world_airspace_ad3f69474e61fe7d722ae850406794421}{countriesReached}}(\textcolor{keywordtype}{string} airport, \textcolor{keywordtype}{int} n);}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{135     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_airspace_a28de32f5e6f4f1febc920190d6e7af9a}{disableAllAirports}}();}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{141     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_airspace_af533f9c6326ea386f1bbf2895257ba45}{activateAllAirports}}();}
+\DoxyCodeLine{142 \};}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJETO2\_WORLDAIRSPACE\_H}}
+
+\end{DoxyCode}

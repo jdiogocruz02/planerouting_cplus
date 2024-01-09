@@ -1,0 +1,171 @@
+\hypertarget{class_world_airspace}{}\doxysection{World\+Airspace Class Reference}
+\label{class_world_airspace}\index{WorldAirspace@{WorldAirspace}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_world_airspace_a1813392a89b1567fbdc239c44617dde4}{World\+Airspace}} ()
+\item 
+\mbox{\hyperlink{class_world_airspace_a2cadf469f994f51d88cfc19a664dd3f6}{$\sim$\+World\+Airspace}} ()
+\item 
+void \mbox{\hyperlink{class_world_airspace_a4661f3835f4965638f74cb7538256834}{show\+Path}} (const string \&departure, const string \&arrival, set$<$ string $>$ \&airlines)
+\item 
+void \mbox{\hyperlink{class_world_airspace_ac5b5f8a351f5ae0095cea909061d7444}{show\+Path}} (const \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&coord\+Departure, const \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&coord\+Arrival, set$<$ string $>$ \&airlines)
+\item 
+int \mbox{\hyperlink{class_world_airspace_a092c4f062e257b5a9621e35174e90695}{count\+Flights\+Source\+Airport}} (string airport)
+\item 
+int \mbox{\hyperlink{class_world_airspace_a72a927d900e69899b8a6edc9b137d126}{count\+Airlines\+Airport}} (string airport, string airline)
+\item 
+int \mbox{\hyperlink{class_world_airspace_a96965406f17299c0489b07fe0a425855}{count\+Targets\+Airport}} (string airport)
+\item 
+int \mbox{\hyperlink{class_world_airspace_abf1e5bc1b2bb48e1a48a0b074edeca9b}{count\+City\+Targets\+Airport}} (string airport)
+\item 
+int \mbox{\hyperlink{class_world_airspace_a5b4c9f5f71c20bae8d929bfbd9655ee2}{count\+Country\+Targets\+Airport}} (string airport)
+\item 
+int \mbox{\hyperlink{class_world_airspace_a51951bfd0efd642d9aa69861632f363f}{airports\+Reached}} (string airport, int n)
+\item 
+int \mbox{\hyperlink{class_world_airspace_a0da0a5f619af5864dc8b3decd6af1160}{cities\+Reached}} (string airport, int n)
+\item 
+int \mbox{\hyperlink{class_world_airspace_ad3f69474e61fe7d722ae850406794421}{countries\+Reached}} (string airport, int n)
+\item 
+void \mbox{\hyperlink{class_world_airspace_a28de32f5e6f4f1febc920190d6e7af9a}{disable\+All\+Airports}} ()
+\item 
+void \mbox{\hyperlink{class_world_airspace_af533f9c6326ea386f1bbf2895257ba45}{activate\+All\+Airports}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_world_airspace_a1813392a89b1567fbdc239c44617dde4}\label{class_world_airspace_a1813392a89b1567fbdc239c44617dde4}} 
+\index{WorldAirspace@{WorldAirspace}!WorldAirspace@{WorldAirspace}}
+\index{WorldAirspace@{WorldAirspace}!WorldAirspace@{WorldAirspace}}
+\doxysubsubsection{\texorpdfstring{WorldAirspace()}{WorldAirspace()}}
+{\footnotesize\ttfamily World\+Airspace\+::\+World\+Airspace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A default constructor of class \mbox{\Hypertarget{class_world_airspace_a2cadf469f994f51d88cfc19a664dd3f6}\label{class_world_airspace_a2cadf469f994f51d88cfc19a664dd3f6}} 
+\index{WorldAirspace@{WorldAirspace}!````~WorldAirspace@{$\sim$WorldAirspace}}
+\index{````~WorldAirspace@{$\sim$WorldAirspace}!WorldAirspace@{WorldAirspace}}
+\doxysubsubsection{\texorpdfstring{$\sim$WorldAirspace()}{~WorldAirspace()}}
+{\footnotesize\ttfamily World\+Airspace\+::$\sim$\+World\+Airspace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A default destructor of class 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_world_airspace_af533f9c6326ea386f1bbf2895257ba45}\label{class_world_airspace_af533f9c6326ea386f1bbf2895257ba45}} 
+\index{WorldAirspace@{WorldAirspace}!activateAllAirports@{activateAllAirports}}
+\index{activateAllAirports@{activateAllAirports}!WorldAirspace@{WorldAirspace}}
+\doxysubsubsection{\texorpdfstring{activateAllAirports()}{activateAllAirports()}}
+{\footnotesize\ttfamily void World\+Airspace\+::activate\+All\+Airports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function that activates all nodes in current \mbox{\hyperlink{class_graph}{Graph}} Time Complexity\+: O(\+V), which V is the number of Nodes \mbox{\Hypertarget{class_world_airspace_a51951bfd0efd642d9aa69861632f363f}\label{class_world_airspace_a51951bfd0efd642d9aa69861632f363f}} 
+\index{WorldAirspace@{WorldAirspace}!airportsReached@{airportsReached}}
+\index{airportsReached@{airportsReached}!WorldAirspace@{WorldAirspace}}
+\doxysubsubsection{\texorpdfstring{airportsReached()}{airportsReached()}}
+{\footnotesize\ttfamily int World\+Airspace\+::airports\+Reached (\begin{DoxyParamCaption}\item[{string}]{airport,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+Given n max flights how many airports are reached \begin{DoxyReturn}{Returns}
+number of airports 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_world_airspace_a0da0a5f619af5864dc8b3decd6af1160}\label{class_world_airspace_a0da0a5f619af5864dc8b3decd6af1160}} 
+\index{WorldAirspace@{WorldAirspace}!citiesReached@{citiesReached}}
+\index{citiesReached@{citiesReached}!WorldAirspace@{WorldAirspace}}
+\doxysubsubsection{\texorpdfstring{citiesReached()}{citiesReached()}}
+{\footnotesize\ttfamily int World\+Airspace\+::cities\+Reached (\begin{DoxyParamCaption}\item[{string}]{airport,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+Given n max flights how many cities are reached \begin{DoxyReturn}{Returns}
+number of airports 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_world_airspace_a72a927d900e69899b8a6edc9b137d126}\label{class_world_airspace_a72a927d900e69899b8a6edc9b137d126}} 
+\index{WorldAirspace@{WorldAirspace}!countAirlinesAirport@{countAirlinesAirport}}
+\index{countAirlinesAirport@{countAirlinesAirport}!WorldAirspace@{WorldAirspace}}
+\doxysubsubsection{\texorpdfstring{countAirlinesAirport()}{countAirlinesAirport()}}
+{\footnotesize\ttfamily int World\+Airspace\+::count\+Airlines\+Airport (\begin{DoxyParamCaption}\item[{string}]{airport,  }\item[{string}]{airline }\end{DoxyParamCaption})}
+
+How many airlines in an airport \begin{DoxyReturn}{Returns}
+number of airlines 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_world_airspace_abf1e5bc1b2bb48e1a48a0b074edeca9b}\label{class_world_airspace_abf1e5bc1b2bb48e1a48a0b074edeca9b}} 
+\index{WorldAirspace@{WorldAirspace}!countCityTargetsAirport@{countCityTargetsAirport}}
+\index{countCityTargetsAirport@{countCityTargetsAirport}!WorldAirspace@{WorldAirspace}}
+\doxysubsubsection{\texorpdfstring{countCityTargetsAirport()}{countCityTargetsAirport()}}
+{\footnotesize\ttfamily int World\+Airspace\+::count\+City\+Targets\+Airport (\begin{DoxyParamCaption}\item[{string}]{airport }\end{DoxyParamCaption})}
+
+How many different countries are reached from an airport \begin{DoxyReturn}{Returns}
+number of cities 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_world_airspace_a5b4c9f5f71c20bae8d929bfbd9655ee2}\label{class_world_airspace_a5b4c9f5f71c20bae8d929bfbd9655ee2}} 
+\index{WorldAirspace@{WorldAirspace}!countCountryTargetsAirport@{countCountryTargetsAirport}}
+\index{countCountryTargetsAirport@{countCountryTargetsAirport}!WorldAirspace@{WorldAirspace}}
+\doxysubsubsection{\texorpdfstring{countCountryTargetsAirport()}{countCountryTargetsAirport()}}
+{\footnotesize\ttfamily int World\+Airspace\+::count\+Country\+Targets\+Airport (\begin{DoxyParamCaption}\item[{string}]{airport }\end{DoxyParamCaption})}
+
+How many different countries are reached from an airport \begin{DoxyReturn}{Returns}
+number of countries 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_world_airspace_a092c4f062e257b5a9621e35174e90695}\label{class_world_airspace_a092c4f062e257b5a9621e35174e90695}} 
+\index{WorldAirspace@{WorldAirspace}!countFlightsSourceAirport@{countFlightsSourceAirport}}
+\index{countFlightsSourceAirport@{countFlightsSourceAirport}!WorldAirspace@{WorldAirspace}}
+\doxysubsubsection{\texorpdfstring{countFlightsSourceAirport()}{countFlightsSourceAirport()}}
+{\footnotesize\ttfamily int World\+Airspace\+::count\+Flights\+Source\+Airport (\begin{DoxyParamCaption}\item[{string}]{airport }\end{DoxyParamCaption})}
+
+voos a partir de um dado aeroporto \begin{DoxyReturn}{Returns}
+número de voos 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_world_airspace_ad3f69474e61fe7d722ae850406794421}\label{class_world_airspace_ad3f69474e61fe7d722ae850406794421}} 
+\index{WorldAirspace@{WorldAirspace}!countriesReached@{countriesReached}}
+\index{countriesReached@{countriesReached}!WorldAirspace@{WorldAirspace}}
+\doxysubsubsection{\texorpdfstring{countriesReached()}{countriesReached()}}
+{\footnotesize\ttfamily int World\+Airspace\+::countries\+Reached (\begin{DoxyParamCaption}\item[{string}]{airport,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+Given n max flights how many cities are reached \begin{DoxyReturn}{Returns}
+number of airports 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_world_airspace_a96965406f17299c0489b07fe0a425855}\label{class_world_airspace_a96965406f17299c0489b07fe0a425855}} 
+\index{WorldAirspace@{WorldAirspace}!countTargetsAirport@{countTargetsAirport}}
+\index{countTargetsAirport@{countTargetsAirport}!WorldAirspace@{WorldAirspace}}
+\doxysubsubsection{\texorpdfstring{countTargetsAirport()}{countTargetsAirport()}}
+{\footnotesize\ttfamily int World\+Airspace\+::count\+Targets\+Airport (\begin{DoxyParamCaption}\item[{string}]{airport }\end{DoxyParamCaption})}
+
+How many different targets from an airport \begin{DoxyReturn}{Returns}
+number of targets/airports 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_world_airspace_a28de32f5e6f4f1febc920190d6e7af9a}\label{class_world_airspace_a28de32f5e6f4f1febc920190d6e7af9a}} 
+\index{WorldAirspace@{WorldAirspace}!disableAllAirports@{disableAllAirports}}
+\index{disableAllAirports@{disableAllAirports}!WorldAirspace@{WorldAirspace}}
+\doxysubsubsection{\texorpdfstring{disableAllAirports()}{disableAllAirports()}}
+{\footnotesize\ttfamily void World\+Airspace\+::disable\+All\+Airports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function that disable all nodes in current \mbox{\hyperlink{class_graph}{Graph}} Time Complexity\+: O(\+V), which V is the number of Nodes \mbox{\Hypertarget{class_world_airspace_ac5b5f8a351f5ae0095cea909061d7444}\label{class_world_airspace_ac5b5f8a351f5ae0095cea909061d7444}} 
+\index{WorldAirspace@{WorldAirspace}!showPath@{showPath}}
+\index{showPath@{showPath}!WorldAirspace@{WorldAirspace}}
+\doxysubsubsection{\texorpdfstring{showPath()}{showPath()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void World\+Airspace\+::show\+Path (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&}]{coord\+Departure,  }\item[{const \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&}]{coord\+Arrival,  }\item[{set$<$ string $>$ \&}]{airlines }\end{DoxyParamCaption})}
+
+@\+Overload Function that prints all path based on users input Time Complexity\+: O(\+V), which V is the number of Nodes 
+\begin{DoxyParams}{Parameters}
+{\em coord\+Departure} & -\/ a \mbox{\hyperlink{struct_coordinate}{Coordinate}} struct containing the coordinate of certain departure airport \\
+\hline
+{\em coord\+Arrival} & -\/ a \mbox{\hyperlink{struct_coordinate}{Coordinate}} struct containing the coordinate of certain arrival airport \\
+\hline
+{\em airlines} & -\/ an set containing the codes of certain airlines the user choice \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_world_airspace_a4661f3835f4965638f74cb7538256834}\label{class_world_airspace_a4661f3835f4965638f74cb7538256834}} 
+\index{WorldAirspace@{WorldAirspace}!showPath@{showPath}}
+\index{showPath@{showPath}!WorldAirspace@{WorldAirspace}}
+\doxysubsubsection{\texorpdfstring{showPath()}{showPath()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void World\+Airspace\+::show\+Path (\begin{DoxyParamCaption}\item[{const string \&}]{departure,  }\item[{const string \&}]{arrival,  }\item[{set$<$ string $>$ \&}]{airlines }\end{DoxyParamCaption})}
+
+@\+Overload Function that prints all path based on users input Time Complexity\+: O(\+V), which V is the number of Nodes 
+\begin{DoxyParams}{Parameters}
+{\em departure} & -\/ a string containing the code of certain departure airport \\
+\hline
+{\em arrival} & -\/ a string containing the name of certain arrival airport \\
+\hline
+{\em airlines} & -\/ an set containing the codes of certain airlines the user choice \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+World\+Airspace.\+h\item 
+World\+Airspace.\+cpp\end{DoxyCompactItemize}
